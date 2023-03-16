@@ -6,8 +6,8 @@
  */
 int main(void)
 {
-	char *message = "ith proper grammar, but the outcome is a piece of art,\n";
+	char *message = "ith proper grammar, but the outcome is a piece of art,";
 
-	printf("%s",message);
+	printf("%s\n",message);
 	return (0);
 }
