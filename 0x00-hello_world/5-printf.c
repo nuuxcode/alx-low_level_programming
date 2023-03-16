@@ -6,7 +6,7 @@
  */
 int main(void)
 {
-	char *message = "ith proper grammar, but the outcome is a piece of art,";
+	char *message = "ith proper grammar, but the outcome is a piece of art,\n";
 
 	printf("%s",message);
 	return (0);
