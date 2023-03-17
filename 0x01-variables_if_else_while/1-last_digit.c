@@ -13,7 +13,6 @@ int main(void)
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
-	n = 2226;
 	/*Last digit of 45528266 is 6 */
 	printf("Last digit of %d is %d ", n, n % 10);
 	/*and is greater than 5*/
