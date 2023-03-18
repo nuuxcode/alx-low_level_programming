@@ -1,3 +1,12 @@
 -----------------
 2023-03-18 15:03:08
 git add output:
+warning: in the working copy of 'push.log', LF will be replaced by CRLF the next time Git touches it
+git commit output:
+[master fb442bb] updated
+ 3 files changed, 4 insertions(+)
+ create mode 100644 0x01-variables_if_else_while/tempCodeRunnerFile.exe
+ create mode 100644 push.log
+git push output:
+To https://github.com/nuuxcode/alx-low_level_programming.git
+   cd88e91..fb442bb  master -> master
