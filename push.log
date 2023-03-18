@@ -10,3 +10,9 @@ git commit output:
 git push output:
 To https://github.com/nuuxcode/alx-low_level_programming.git
    cd88e91..fb442bb  master -> master
+warning: in the working copy of 'README.md', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'push.log', LF will be replaced by CRLF the next time Git touches it
+[master 2250e96] updated
+ 1 file changed, 9 insertions(+)
+To https://github.com/nuuxcode/alx-low_level_programming.git
+   fb442bb..2250e96  master -> master
