@@ -1,18 +1,18 @@
 #include "main.h"
 
-/**
- * _islower - Entry point
- * Description: sasasa
- * Return: Always 0 (Success)
+ /**
+ * _islower - Short description, single line
+ * @c: Description of parameter x
+(*
+ * Description: Longer description of the function)?
+(* section header: Section description)*
+ * Return: Description of the returned value
  */
 int _islower(int c)
 {
-	char str;
-	int i = 0;
-
 	if (c >= 65 && c <=  90)
-		printf("Character is Upper Case Letters");
+		return (0);
 	else
-		printf("Character is Not Upper Case Letters");
-	return (0);
+		return (1);
 }
+
