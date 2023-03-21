@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * jack_bauer - check the code.
+ * times_table - check the code.
  * Description
  * Return: Always 0.
  */
@@ -21,9 +21,9 @@ void times_table(void)
 				_putchar(res + '0');
 				_putchar(n % 10 + '0');
 			}
-			else 
-			{	
-				if (j!=0)
+			else
+			{
+				if (j != 0)
 				{
 				_putchar(' ');
 				}
