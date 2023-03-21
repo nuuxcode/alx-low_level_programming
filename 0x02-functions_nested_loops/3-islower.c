@@ -1,11 +1,11 @@
 #include "main.h"
 
- /**
- * _islower - Short description, single line
+/**
+ * _islower - dqzdqzdqzdqzd
  * @c: Description of parameter x
-(*
- * Description: Longer description of the function)?
-(* section header: Section description)*
+ *
+ * Description: ddzqdqzd
+ * section header: Section description)*
  * Return: Description of the returned value
  */
 int _islower(int c)
@@ -15,4 +15,3 @@ int _islower(int c)
 	else
 		return (1);
 }
-
