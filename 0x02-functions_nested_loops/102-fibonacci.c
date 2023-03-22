@@ -14,7 +14,7 @@ int main(void)
 
 	printf("%ld, ", a);
 	printf("%ld, ", b);
-	for (i = 0; i < 49; i++)
+	for (i = 0; i < 48; i++)
 	{
 		sum = a + b;
 		a = b;
