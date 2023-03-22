@@ -11,13 +11,14 @@ int main(void)
 	int b = 2;
 	int sum = 0;
 	int i;
+
 	printf("%d, ", a);
 	printf("%d, \n", b);
 	for (i = 0; i < 50; i++)
 	{
-		sum=a+b;
-		a=b;
-		b=sum;
+		sum = a + b;
+		a = b;
+		b = sum;
 		printf("%d, ", sum);
 	}
 
