@@ -31,5 +31,5 @@ int largest_number(int a, int b, int c)
 		c = temp;
 	}
 
-	return (c);s
+	return (c);
 }
