@@ -7,20 +7,20 @@
  */
 int main(void)
 {
-	int a = 1;
-	int b = 2;
-	int sum = 0;
+	unsigned long int a = 1;
+	unsigned long int b = 2;
+	unsigned long int sum = 0;
 	int i;
 
-	printf("%d, ", a);
-	printf("%d, \n", b);
-	for (i = 0; i < 50; i++)
+	printf("%ld, ", a);
+	printf("%ld, ", b);
+	for (i = 0; i < 49; i++)
 	{
 		sum = a + b;
 		a = b;
 		b = sum;
-		printf("%d, ", sum);
+		printf("%ld, ", sum);
 	}
-
+	printf("\n");
 	return (0);
 }
