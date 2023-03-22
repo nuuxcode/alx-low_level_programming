@@ -1,7 +1,7 @@
 #include "stdio.h"
 
 /**
- * multiples - check the code.
+ * main - check the code.
  * Description
  * Return: Always 0.
  */
@@ -15,7 +15,6 @@ int main(void)
 		if (i % 3 == 0 || i % 5 == 0)
 		{
 			sum += i;
-			
 		}
 	}
 	printf("%d\n", sum);
