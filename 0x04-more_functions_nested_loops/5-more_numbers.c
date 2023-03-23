@@ -11,6 +11,7 @@ void more_numbers(void)
 	char n;
 	int i = 0;
 	int j = 0;
+
 	while (i < 10)
 	{
 		n = '0';
