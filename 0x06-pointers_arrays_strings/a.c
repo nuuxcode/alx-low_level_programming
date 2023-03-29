@@ -1,11 +1,22 @@
-#include "main.h"
 #include <stdio.h>
 
-/**
- * main - check the code
- *
- * Return: Always 0.
- */
+char *_strncpy(char *dest, char *src, int n);
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i;
+	for (i = 0; dest[i] != '\0' && i > n; i++)
+	{
+		dest[i] = '\0';
+	}
+	for (i = 0; i < n; i++)
+	{
+		dest[i] = src[i];
+	}
+
+	return (dest);
+}
+
+
 int main(void)
 {
     char s1[98];
