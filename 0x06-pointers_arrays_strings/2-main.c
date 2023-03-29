@@ -12,18 +12,18 @@ int main(void)
     char *ptr;
     int i;
 
-    for (i = 0; i < 98 - 1; i++)
+    for (i = 0; i < 97; i++)
     {
         s1[i] = '*';
     }
     s1[i] = '\0';
-    printf("%s\n", s1);
+    printf("s1: %s\n", s1);
     ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 5);
-    printf("%s\n", s1);
-    printf("%s\n", ptr);
+    printf("s1: %s\n", s1);
+    printf("ptr: %s\n", ptr);
     ptr = _strncpy(s1, "First, solve the problem. Then, write the code\n", 90);
-    printf("%s", s1);
-    printf("%s", ptr);
+    printf("s1: %s", s1);
+    printf("ptr: %s", ptr);
     for (i = 0; i < 98; i++)
     {
         if (i % 10)
@@ -36,7 +36,6 @@ int main(void)
         }
         printf("0x%02x", s1[i]);
     }
-    printf("\n %d",i);
     printf("\n");
     return (0);
 }
