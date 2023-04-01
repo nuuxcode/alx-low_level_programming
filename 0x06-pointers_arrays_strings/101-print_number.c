@@ -23,6 +23,6 @@ void print_number(int n)
 	}
 	else
 	{
-		_putchar(n + '0');
+		_putchar(x + '0');
 	}
 }
