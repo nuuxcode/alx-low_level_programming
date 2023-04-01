@@ -8,37 +8,27 @@
 char *rot13(char *str)
 {
 	int i, j;
-	int temp;
-	int a[] = {'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+	char a[] = {'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+				'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+				'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M',
+				'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z'};
+
+	char b[] = {'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z',
+				'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm',
+				'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z',
+				'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M'};
+
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		for (j = 0; j <= 26; j++)
+		for (j = 0; j < 52; j++)
 		{
-			if ((str[i] == a[j] || str[i] == a[j] + 32))
+			if (str[i] == a[j])
 			{
-
-				if (str[i] >= 'a' && str[i] <= 'z')
-				{
-					printf("%c\n", str[i]);
-					printf("%c\n", a[j]);
-					str[i] = str[i] + 13;
-					temp = str[i] - ('z' + 1);
-					str[i] = 'a' + temp;
-					printf("%c\n", str[i]);
-					printf("-----\n");
-				}
-				else
-				{
-					printf("%c\n", str[i]);
-					printf("%c\n", a[j] + 32);
-					str[i] = str[i] + 13;
-					temp = str[i] - ('Z' + 1);
-					str[i] = 'A' + temp;
-					printf("%c\n", str[i]);
-					printf("-----\n");
-				}
+				str[i] = b[j];
+				break;
 			}
 		}
 	}
-	return (str);
+
+	return str;
 }
