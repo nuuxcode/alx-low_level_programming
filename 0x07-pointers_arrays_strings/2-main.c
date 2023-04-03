@@ -9,15 +9,35 @@
 int main(void)
 {
     char *s = "hello";
-    char *f;
+    char *a;
+    char *b;
+    char *c;
 
-    f = _strchr(s, 'x');
+    a = _strchr(s, 'l');
+    b = _strchr(s, '\0');
+    c = _strchr(s, 'x');
 
-    if (f != NULL)
+    if (a != NULL)
     {
-        printf("%s\n", f);
+        printf("%s\n", a);
     }
-    else if (f == NULL)
+    else if (a == NULL)
+    {
+        printf("nullll\n");
+    }
+    if (b != NULL)
+    {
+        printf("%s\n", b);
+    }
+    else if (b == NULL)
+    {
+        printf("nullll\n");
+    }
+    if (c != NULL)
+    {
+        printf("%s\n", c);
+    }
+    else if (c == NULL)
     {
         printf("nullll\n");
     }
