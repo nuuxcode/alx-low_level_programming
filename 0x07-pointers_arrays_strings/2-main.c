@@ -11,11 +11,15 @@ int main(void)
     char *s = "hello";
     char *f;
 
-    f = _strchr(s, 'l');
+    f = _strchr(s, 'x');
 
     if (f != NULL)
     {
         printf("%s\n", f);
+    }
+    else
+    {
+        printf("nullll\n");
     }
     return (0);
 }

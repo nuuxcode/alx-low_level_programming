@@ -12,8 +12,6 @@ char *_strchr(char *s, char c)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
-		printf("%s", s[i]);
-		printf("%s\n", s[i + 1]);
 		if (s[i] == c)
 		{
 			s = (s + i);
@@ -23,5 +21,5 @@ char *_strchr(char *s, char c)
 			return (NULL);
 		}
 	}
-	return (s);
+	return (NULL);
 }
