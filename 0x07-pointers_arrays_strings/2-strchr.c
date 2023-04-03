@@ -12,11 +12,13 @@ char *_strchr(char *s, char c)
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
+		printf("%s", s[i]);
+		printf("%s\n", s[i + 1]);
 		if (s[i] == c)
 		{
 			s = (s + i);
 		}
-		else if (s[i+1] == '\0')
+		else if (s[i + 1] == '\0')
 		{
 			return (NULL);
 		}
