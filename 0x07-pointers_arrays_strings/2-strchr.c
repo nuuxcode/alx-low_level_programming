@@ -4,6 +4,7 @@
  * _strchr - fills memory with a constant byte.
  * @s: first bytes of the memory
  * @c: constant byte b
+ * Return: Null when not found
  */
 char *_strchr(char *s, char c)
 {
@@ -17,7 +18,7 @@ char *_strchr(char *s, char c)
 		}
 		else if (s[i] == '\0')
 		{
-			return NULL;
+			return (NULL);
 		}
 	}
 	return (s);
