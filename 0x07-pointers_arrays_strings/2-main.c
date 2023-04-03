@@ -17,7 +17,7 @@ int main(void)
     {
         printf("%s\n", f);
     }
-    else
+    else if (f == NULL)
     {
         printf("nullll\n");
     }
