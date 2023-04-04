@@ -1,0 +1,31 @@
+__libc_start_main(0x400876, 1, 0x7fff79d83808, 0x400a60 <unfinished ...>
+strncmp("SHELL=/bin/bash", "jennieandjayloveasm=", 20) = -23
+strncmp("COLORTERM=truecolor", "jennieandjayloveasm=", 20) = -39
+strncmp("TERM_PROGRAM_VERSION=1.74.2", "jennieandjayloveasm=", 20) = -22
+strncmp("PWD=/vagrant_data/github/alx-low"..., "jennieandjayloveasm=", 20) = -26
+strncmp("LOGNAME=root", "jennieandjayloveasm=", 20) = -30
+strncmp("XDG_SESSION_TYPE=tty", "jennieandjayloveasm=", 20) = -18
+strncmp("MOTD_SHOWN=pam", "jennieandjayloveasm=", 20) = -29
+strncmp("HOME=/root", "jennieandjayloveasm=", 20) = -34
+strncmp("LANG=C.UTF-8", "jennieandjayloveasm=", 20) = -30
+strncmp("LS_COLORS=rs=0:di=01;34:ln=01;36"..., "jennieandjayloveasm=", 20) = -30
+strncmp("SSH_CONNECTION=10.0.2.2 53245 10"..., "jennieandjayloveasm=", 20) = -23
+strncmp("LESSCLOSE=/usr/bin/lesspipe %s %"..., "jennieandjayloveasm=", 20) = -30
+strncmp("XDG_SESSION_CLASS=user", "jennieandjayloveasm=", 20) = -18
+strncmp("TERM=xterm-256color", "jennieandjayloveasm=", 20) = -22
+strncmp("LESSOPEN=| /usr/bin/lesspipe %s", "jennieandjayloveasm=", 20) = -30
+strncmp("USER=root", "jennieandjayloveasm=", 20) = -21
+strncmp("SHLVL=1", "jennieandjayloveasm=", 20) = -23
+strncmp("XDG_SESSION_ID=425", "jennieandjayloveasm=", 20) = -18
+strncmp("XDG_RUNTIME_DIR=/run/user/0", "jennieandjayloveasm=", 20) = -18
+strncmp("PS1=\\[\033]633;A\a\\]\\[\\033[38;5;226m"..., "jennieandjayloveasm=", 20) = -26
+strncmp("SSH_CLIENT=10.0.2.2 53245 22", "jennieandjayloveasm=", 20) = -23
+strncmp("XDG_DATA_DIRS=/usr/local/share:/"..., "jennieandjayloveasm=", 20) = -18
+strncmp("BROWSER=/root/.vscode-server/bin"..., "jennieandjayloveasm=", 20) = -40
+strncmp("PATH=/root/.vscode-server/bin/e8"..., "jennieandjayloveasm=", 20) = -26
+strncmp("DBUS_SESSION_BUS_ADDRESS=unix:pa"..., "jennieandjayloveasm=", 20) = -38
+strncmp("TERM_PROGRAM=vscode", "jennieandjayloveasm=", 20) = -22
+strncmp("VSCODE_IPC_HOOK_CLI=/run/user/0/"..., "jennieandjayloveasm=", 20) = -20
+strncmp("_=/usr/bin/ltrace", "jennieandjayloveasm=", 20) = -11
+puts("Access Denied")                = 14
++++ exited (status 1) +++
