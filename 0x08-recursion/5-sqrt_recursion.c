@@ -11,9 +11,7 @@ float _sqrt_recursion2(int n, float sqrt, float res)
 {
 	if (sqrt == res)
 	{
-		int int_sqrt = (int)sqrt;
-
-		if ((float)int_sqrt == sqrt)
+		if ((int)sqrt == sqrt)
 		{
 			return (sqrt);
 		}
