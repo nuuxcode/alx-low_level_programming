@@ -17,10 +17,11 @@ int main(int argc, char *argv[])
 	if (argc != 3)
 	{
 		printf("Error");
+		return (1);
 	}
 	else
 	{
 		printf("%d\n", a * b);
 	}
-	return (1);
+	return (0);
 }
