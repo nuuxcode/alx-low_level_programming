@@ -1,6 +1,7 @@
 #include "main.h"
 /**
- * create_array - function that creates an array of chars, and initializes it with a specific char
+ * create_array - function that creates an array of chars,
+ *  and initializes it with a specific char
  * @size: first bytes of the memory
  * @c: constant byte b
  * Return: pointer to the resulting string dests
