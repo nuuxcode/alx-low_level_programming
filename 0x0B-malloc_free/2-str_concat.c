@@ -38,7 +38,7 @@ char *str_concat(char *s1, char *s2)
 		}
 		else
 		{
-			copy[i] = s2[i];
+			copy[i] = s2[i-size1];
 		}
 	}
 	return (copy);
