@@ -13,15 +13,11 @@ char *str_concat(char *s1, char *s2)
 	int size1 = 0;
 	int size2 = 0;
 
-	if (!s1 || !s2)
-	{
-		return (NULL);
-	}
-	while (s1[size1])
+	while (s1 != NULL && s1[size1])
 	{
 		size1++;
 	}
-	while (s2[size2])
+	while (s2 != NULL && s2[size2])
 	{
 		size2++;
 	}
@@ -38,7 +34,7 @@ char *str_concat(char *s1, char *s2)
 		}
 		else
 		{
-			copy[i] = s2[i-size1];
+			copy[i] = s2[i - size1];
 		}
 	}
 	return (copy);
