@@ -35,7 +35,7 @@ char *argstostr(int ac, char **av)
 			j++;
 		}
 	}
-	
+
 	printf("%s\n", s);
 	return (s);
 }
