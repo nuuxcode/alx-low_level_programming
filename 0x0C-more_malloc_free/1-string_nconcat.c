@@ -44,5 +44,6 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 			copy[i] = s2[i - size1];
 		}
 	}
+	copy[i] = '\0';
 	return (copy);
 }
