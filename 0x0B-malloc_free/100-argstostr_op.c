@@ -8,37 +8,29 @@
 
 char *argstostr(int ac, char **av)
 {
-	int i, j, z = 0;
-	int size = 0;
-	char *s;
+	int i, j, len = 0;
+	char *s, *p;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
+
 	for (i = 0; i < ac; i++)
-	{
-		j = 0;
-		while (av[i][j] != '\0')
-		{
-			size++;
-			j++;
-		}
-		size++;
-	}
-	s = malloc(size + 1);
+		for (j = 0; av[i][j]; j++)
+			len++;
+
+	s = malloc(len + ac + 1);
 	if (s == NULL)
 		return (NULL);
+
+	p = s;
 	for (i = 0; i < ac; i++)
 	{
 		j = 0;
-		while (av[i][j] != '\0')
-		{
-			s[z] = av[i][j];
-			j++;
-			z++;
-		}
-		s[z] = '\n';
-		z++;
+		while (av[i][j])
+			*p++ = av[i][j++];
+		*p++ = '\n';
 	}
-	s[z] = '\0';
+	*p = '\0';
+
 	return (s);
 }
