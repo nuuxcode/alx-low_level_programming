@@ -26,12 +26,12 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	{
 		size2++;
 	}
+	size2 = size2 - (size2 - n);
 	copy = malloc(size1 + size2 + 1);
 	if (!copy)
 	{
 		return (NULL);
 	}
-	size2 = size2 - (size2 - n);
 	for (i = 0; i < size1 + size2; i++)
 	{
 		if (i < size1)
