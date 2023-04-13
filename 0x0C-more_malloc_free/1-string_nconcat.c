@@ -9,10 +9,10 @@
  */
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
-	int i;
+	unsigned int i;
 	char *copy;
-	int size1 = 0;
-	int size2 = 0;
+	unsigned int size1 = 0;
+	unsigned int size2 = 0;
 
 	if (s2 == NULL)
 		s2 = "";
@@ -27,7 +27,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		size2++;
 	}
 	size2 = size2 - (size2 - n);
-	copy = malloc(size1 + size2 + 1);
+	copy = malloc(size1 + size2);
 	if (!copy)
 	{
 		return (NULL);
