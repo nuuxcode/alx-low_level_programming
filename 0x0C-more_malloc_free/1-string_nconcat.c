@@ -13,13 +13,16 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	char *copy;
 	int size1 = 0;
 	int size2 = 0;
-	(void)n;
 
-	while (s1 != NULL && s1[size1])
+	if (s2 == NULL)
+		s2 = "";
+	if (s1 == NULL)
+		s1 = "";
+	while (s1[size1])
 	{
 		size1++;
 	}
-	while (s2 != NULL && s2[size2])
+	while (s2[size2])
 	{
 		size2++;
 	}
