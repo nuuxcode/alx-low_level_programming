@@ -11,7 +11,7 @@ int main(void)
 {
     int i;
     char *concat;
-    concat = string_nconcat(NULL, "NULL", 10);
+    concat = string_nconcat("a", "b", 10);
     printf("%s\n", concat);
 
     for (i = 0; i < (int)strlen(concat)+1; i++)
