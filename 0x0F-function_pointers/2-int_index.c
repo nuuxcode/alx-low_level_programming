@@ -1,10 +1,10 @@
 #include <stdio.h>
 
 /**
- * array_iterator - entry point
+ * int_index - entry point
  * @array: size of triangle
  * @size: size of triangle
- * @action: size of triangle
+ * @cmp: size of triangle
  * Description: --
  * Return: --
  */
