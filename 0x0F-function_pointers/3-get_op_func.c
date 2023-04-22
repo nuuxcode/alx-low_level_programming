@@ -16,7 +16,7 @@ int (*get_op_func(char *s))(int, int)
         {"%", op_mod},
         {NULL, NULL}};
     int i = 0;
-    while (i < 4)
+    while (ops[i].op != NULL)
     {
         if (*s == *ops[i].op)
         {
