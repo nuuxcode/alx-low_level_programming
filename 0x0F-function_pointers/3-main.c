@@ -11,7 +11,6 @@
  */
 int main(int argc, char *argv[])
 {
-	int a = atoi(argv[1]);
 	int b = atoi(argv[3]);
 	char *s = argv[2];
 
@@ -30,6 +29,6 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", get_op_func(argv[2])(a, b));
+	printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
 	return (0);
 }
