@@ -7,28 +7,32 @@
  * @argc: character
  * @argv: character
  *
- * Description: -
+ * Des[0]cription: -
  * Return: -
  */
 int main(int argc, char *argv[])
 {
+	int a = atoi(argv[1]);
+	int b = atoi(argv[3]);
+	char *s = argv[2];
+
 	if (argc != 4)
 	{
 		printf("Error\n");
 		exit(98);
 	}
-	if (argv[2] != "+" || argv[2] != "-" ||
-		argv[2] != "*" || argv[2] != "/" ||
-		argv[2] != "%")
+	if (s[0] != '+' && s[0] != '-' &&
+		s[0] != '*' && s[0] != '/' &&
+		s[0] != '%')
 	{
 		printf("Error\n");
 		exit(99);
 	}
-	if ((argv[2] != "/" || argv[2] != "%") && atoi(argv[3]) == 0)
+	if ((s[0] != '/' || s[0] != '%') && b == 0)
 	{
 		printf("Error\n");
 		exit(100);
 	}
-	printf("%d\n", get_op_func(argv[2])(atoi(argv[1]), atoi(argv[3])));
+	printf("%d\n", get_op_func(argv[2])(a, b));
 	return (0);
 }
