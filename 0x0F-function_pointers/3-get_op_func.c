@@ -5,7 +5,7 @@
  * @s: -
  * Return: pointer.
  */
-int (*get_op_func(char *s))(int a, int b)
+int (*get_op_func(char *s))(int, int)
 {
 	op_t ops[] = {
 		{"+", op_add},
@@ -18,8 +18,7 @@ int (*get_op_func(char *s))(int a, int b)
 
 	while (ops[i].op != NULL)
 	{
-		if (*s == *ops[i].op &&
-			*(s + 1) == '\0')
+		if (s[0] == ops[i].op[0])
 		{
 			return (ops[i].f);
 		}
