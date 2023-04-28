@@ -1,6 +1,5 @@
 section .data
     msg db "Hello, Holberton", 10
-    len equ $ - msg + 1
 
 section .text
     global main
@@ -14,6 +13,5 @@ main:
     xor eax, eax
     call printf
 
-    mov eax, 0
     leave
     ret
