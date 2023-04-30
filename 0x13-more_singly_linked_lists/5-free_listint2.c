@@ -1,11 +1,11 @@
 #include "lists.h"
 
 /**
- * free_listint - check the code
+ * free_listint2 - check the code
  * @head: a
  * Return: Always 0.
  */
-void free_listint(listint_t *head)
+void free_listint2(listint_t **head)
 {
 	listint_t *nav = head, *nav2;
 

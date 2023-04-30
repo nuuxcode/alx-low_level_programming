@@ -22,17 +22,7 @@ int main(void)
     add_nodeint_end(&head, 402);
     add_nodeint_end(&head, 1024);
     print_listint(head);
+    free_listint2(&head);
+    printf("%p\n", (void *)head);
     return (0);
 }
-/*
-julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-main.c 3-add_nodeint_end.c 0-print_listint.c -o d
-julien@ubuntu:~/0x13. More singly linked lists$ ./d
-0
-1
-2
-3
-4
-98
-402
-1024
-*/
