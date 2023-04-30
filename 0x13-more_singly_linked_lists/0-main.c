@@ -22,7 +22,7 @@ int main(void)
     new->n = 9;
     new->next = head;
     head = new;
-    n = print_listint(head);
+    n = print_listint(NULL);
     printf("-> %lu elements\n", n);
     free(new);
     return (0);
