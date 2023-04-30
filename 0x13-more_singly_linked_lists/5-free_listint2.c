@@ -18,5 +18,5 @@ void free_listint2(listint_t **head)
 		nav = nav2;
 	}
 	*head = NULL;
-	head = NULL;
+	free(head);
 }
