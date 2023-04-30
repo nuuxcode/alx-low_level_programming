@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- * print_listint - check the code
+ * print_listint - check dthe code
  * @h: a
  * Return: Always 0.
  */
