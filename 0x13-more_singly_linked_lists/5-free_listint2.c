@@ -9,6 +9,8 @@ void free_listint2(listint_t **head)
 {
 	listint_t *nav, *nav2;
 
+	if (head == NULL || *head == NULL)
+		return;
 	nav = *head;
 	while (nav)
 	{
