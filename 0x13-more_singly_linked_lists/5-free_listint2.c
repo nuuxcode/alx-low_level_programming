@@ -1,4 +1,5 @@
 #include "lists.h"
+
 /**
  * free_listint2 - Frees a list
  * @head: Adress of the pointer to head
