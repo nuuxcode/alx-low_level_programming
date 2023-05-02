@@ -30,6 +30,12 @@ int main(void)
     return (0);
 }
 /*
+Write a function that returns the nth node of a listint_t linked list.
+
+Prototype: listint_t *get_nodeint_at_index(listint_t *head, unsigned int index);
+where index is the index of the node, starting at 0
+if the node does not exist, return NULL
+
 julien@ubuntu:~/0x13. More singly linked lists$ gcc -Wall -pedantic -Werror -Wextra -std=gnu89 7-main.c 3-add_nodeint_end.c 0-print_listint.c 5-free_listint2.c 7-get_nodeint.c -o h
 julien@ubuntu:~/0x13. More singly linked lists$ ./h
 0
