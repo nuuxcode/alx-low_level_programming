@@ -1,22 +1,20 @@
 #include "lists.h"
-
 /**
- * free_listint2 - check the code
- * @head: a
- * Return: Always 0.
- */
+ * free_listint2 - Frees a list
+ * @head: Adress of the pointer to head
+*/
 void free_listint2(listint_t **head)
 {
-	listint_t *nav, *nav2;
+	listint_t *nex, *tofree;
 
-	if (!head || !*head)
+	if (!(*head) || !head)
 		return;
-	nav = *head;
-	while (nav)
+	tofree = *head;
+	while (tofree)
 	{
-		nav2 = nav->next;
-		free(nav);
-		nav = nav2;
+		nex = tofree->next;
+		free(tofree);
+		tofree = nex;
 	}
 	*head = NULL;
 }
