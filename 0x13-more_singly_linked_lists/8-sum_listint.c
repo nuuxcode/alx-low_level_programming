@@ -7,7 +7,7 @@
  */
 int sum_listint(listint_t *head)
 {
-	const listint_t *nav = head;
+	listint_t *nav = head;
 	size_t count = 0;
 
 	while (nav)
@@ -16,6 +16,4 @@ int sum_listint(listint_t *head)
 		nav = nav->next;
 	}
 	return (count);
-
-	return (0);
 }
