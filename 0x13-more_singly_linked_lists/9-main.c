@@ -15,7 +15,10 @@ int main(void)
     head = NULL;
     print_listint(head);
     printf("-----------------\n");
-    insert_nodeint_at_index(&head, 0, 44);
+    insert_nodeint_at_index(&head, 0, 00);
+    insert_nodeint_at_index(&head, 1, 11);
+    insert_nodeint_at_index(&head, 2, 22);
+    insert_nodeint_at_index(&head, 3, 33);
     print_listint(head);
     free_listint2(&head);
     return (0);
