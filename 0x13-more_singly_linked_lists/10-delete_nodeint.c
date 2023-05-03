@@ -25,13 +25,17 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 		if (i == index)
 			deleted = nav;
 		if (i == index - 1)
-		{
 			before = nav;
-		}
 		if (i == index + 1)
 		{
 			before->next = nav;
 			free(deleted);
+			return (1);
+		}
+		if (nav->next == NULL && i == index)
+		{
+			before->next = NULL;
+			free(nav);
 			return (1);
 		}
 		nav = nav->next;
