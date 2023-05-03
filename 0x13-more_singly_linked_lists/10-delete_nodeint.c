@@ -21,11 +21,6 @@ int delete_nodeint_at_index(listint_t **head, unsigned int index)
 	}
 	while (nav)
 	{
-		if (index == 0 && i == 1)
-		{
-			*head = nav;
-			return (1);
-		}
 		if (i == index - 1)
 		{
 			before = nav;
