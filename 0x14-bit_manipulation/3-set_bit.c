@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * print_binary - function
+ * set_bit - function
  * @n: a
+ * @index: a
  * Return: Always 0.
  */
 
