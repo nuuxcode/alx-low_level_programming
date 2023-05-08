@@ -1,7 +1,7 @@
 #include "main.h"
 
 /**
- * create_file - function that converts a binary number to an unsigned int
+ * append_text_to_file - function that convert
  * @filename: a
  * @text_content: a
  * Return: Always 0.
