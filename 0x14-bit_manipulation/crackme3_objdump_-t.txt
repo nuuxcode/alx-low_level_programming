@@ -1,0 +1,76 @@
+
+crackme3:     file format elf64-x86-64
+
+SYMBOL TABLE:
+0000000000400238 l    d  .interp	0000000000000000              .interp
+0000000000400254 l    d  .note.ABI-tag	0000000000000000              .note.ABI-tag
+0000000000400274 l    d  .note.gnu.build-id	0000000000000000              .note.gnu.build-id
+0000000000400298 l    d  .gnu.hash	0000000000000000              .gnu.hash
+00000000004002c0 l    d  .dynsym	0000000000000000              .dynsym
+0000000000400368 l    d  .dynstr	0000000000000000              .dynstr
+00000000004003bc l    d  .gnu.version	0000000000000000              .gnu.version
+00000000004003d0 l    d  .gnu.version_r	0000000000000000              .gnu.version_r
+00000000004003f0 l    d  .rela.dyn	0000000000000000              .rela.dyn
+0000000000400420 l    d  .rela.plt	0000000000000000              .rela.plt
+0000000000400480 l    d  .init	0000000000000000              .init
+00000000004004a0 l    d  .plt	0000000000000000              .plt
+00000000004004f0 l    d  .plt.got	0000000000000000              .plt.got
+0000000000400500 l    d  .text	0000000000000000              .text
+0000000000400764 l    d  .fini	0000000000000000              .fini
+0000000000400770 l    d  .rodata	0000000000000000              .rodata
+000000000040079c l    d  .eh_frame_hdr	0000000000000000              .eh_frame_hdr
+00000000004007d8 l    d  .eh_frame	0000000000000000              .eh_frame
+0000000000600e10 l    d  .init_array	0000000000000000              .init_array
+0000000000600e18 l    d  .fini_array	0000000000000000              .fini_array
+0000000000600e20 l    d  .jcr	0000000000000000              .jcr
+0000000000600e28 l    d  .dynamic	0000000000000000              .dynamic
+0000000000600ff8 l    d  .got	0000000000000000              .got
+0000000000601000 l    d  .got.plt	0000000000000000              .got.plt
+0000000000601038 l    d  .data	0000000000000000              .data
+0000000000601060 l    d  .bss	0000000000000000              .bss
+0000000000000000 l    d  .comment	0000000000000000              .comment
+0000000000000000 l    df *ABS*	0000000000000000              crtstuff.c
+0000000000600e20 l     O .jcr	0000000000000000              __JCR_LIST__
+0000000000400530 l     F .text	0000000000000000              deregister_tm_clones
+0000000000400570 l     F .text	0000000000000000              register_tm_clones
+00000000004005b0 l     F .text	0000000000000000              __do_global_dtors_aux
+0000000000601068 l     O .bss	0000000000000001              completed.7585
+0000000000600e18 l     O .fini_array	0000000000000000              __do_global_dtors_aux_fini_array_entry
+00000000004005d0 l     F .text	0000000000000000              frame_dummy
+0000000000600e10 l     O .init_array	0000000000000000              __frame_dummy_init_array_entry
+0000000000000000 l    df *ABS*	0000000000000000              101-main.c
+0000000000000000 l    df *ABS*	0000000000000000              crtstuff.c
+00000000004008e8 l     O .eh_frame	0000000000000000              __FRAME_END__
+0000000000600e20 l     O .jcr	0000000000000000              __JCR_END__
+0000000000000000 l    df *ABS*	0000000000000000              
+0000000000600e18 l       .init_array	0000000000000000              __init_array_end
+0000000000600e28 l     O .dynamic	0000000000000000              _DYNAMIC
+0000000000600e10 l       .init_array	0000000000000000              __init_array_start
+000000000040079c l       .eh_frame_hdr	0000000000000000              __GNU_EH_FRAME_HDR
+0000000000601000 l     O .got.plt	0000000000000000              _GLOBAL_OFFSET_TABLE_
+0000000000400760 g     F .text	0000000000000002              __libc_csu_fini
+0000000000000000  w      *UND*	0000000000000000              _ITM_deregisterTMCloneTable
+0000000000601038  w      .data	0000000000000000              data_start
+0000000000000000       F *UND*	0000000000000000              puts@@GLIBC_2.2.5
+0000000000601048 g       .data	0000000000000000              _edata
+0000000000400764 g     F .fini	0000000000000000              _fini
+0000000000000000       F *UND*	0000000000000000              strlen@@GLIBC_2.2.5
+0000000000000000       F *UND*	0000000000000000              __libc_start_main@@GLIBC_2.2.5
+0000000000601038 g       .data	0000000000000000              __data_start
+0000000000000000       F *UND*	0000000000000000              fprintf@@GLIBC_2.2.5
+0000000000000000  w      *UND*	0000000000000000              __gmon_start__
+0000000000601040 g     O .data	0000000000000000              .hidden __dso_handle
+0000000000400770 g     O .rodata	0000000000000004              _IO_stdin_used
+00000000004006f0 g     F .text	0000000000000065              __libc_csu_init
+0000000000601070 g       .bss	0000000000000000              _end
+0000000000400500 g     F .text	000000000000002a              _start
+0000000000601048 g       .bss	0000000000000000              __bss_start
+0000000000400675 g     F .text	000000000000007a              main
+0000000000000000  w      *UND*	0000000000000000              _Jv_RegisterClasses
+00000000004005f6 g     F .text	000000000000007f              check_password
+0000000000601048 g     O .data	0000000000000000              .hidden __TMC_END__
+0000000000000000  w      *UND*	0000000000000000              _ITM_registerTMCloneTable
+0000000000400480 g     F .init	0000000000000000              _init
+0000000000601060 g     O .bss	0000000000000008              stderr@@GLIBC_2.2.5
+
+

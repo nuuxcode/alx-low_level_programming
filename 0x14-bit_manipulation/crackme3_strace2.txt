@@ -1,0 +1,33 @@
+strace -d -D -f -i -o crackme3_strace2.txt ./crackme3
+11902 [00007f5b99ad417b] execve("./crackme3", ["./crackme3"], 0x7fff3debba50 /* 28 vars */) = 0
+11902 [00007f4b6a47bf4b] brk(NULL)      = 0x1611000
+11902 [00007f4b6a47abf5] arch_prctl(0x3001 /* ARCH_??? */, 0x7ffe0f412150) = -1 EINVAL (Invalid argument)
+11902 [00007f4b6a47cdfb] access("/etc/ld.so.preload", R_OK) = -1 ENOENT (No such file or directory)
+11902 [00007f4b6a47cf68] openat(AT_FDCWD, "/etc/ld.so.cache", O_RDONLY|O_CLOEXEC) = 3
+11902 [00007f4b6a47cd39] fstat(3, {st_mode=S_IFREG|0644, st_size=29079, ...}) = 0
+11902 [00007f4b6a47d186] mmap(NULL, 29079, PROT_READ, MAP_PRIVATE, 3, 0) = 0x7f4b6a456000
+11902 [00007f4b6a47ce2b] close(3)       = 0
+11902 [00007f4b6a47cf68] openat(AT_FDCWD, "/lib/x86_64-linux-gnu/libc.so.6", O_RDONLY|O_CLOEXEC) = 3
+11902 [00007f4b6a47d028] read(3, "\177ELF\2\1\1\3\0\0\0\0\0\0\0\0\3\0>\0\1\0\0\0\300A\2\0\0\0\0\0"..., 832) = 832
+11902 [00007f4b6a47d05e] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+11902 [00007f4b6a47d05e] pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+11902 [00007f4b6a47d05e] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\30x\346\264ur\f|Q\226\236i\253-'o"..., 68, 880) = 68
+11902 [00007f4b6a47cd39] fstat(3, {st_mode=S_IFREG|0755, st_size=2029592, ...}) = 0
+11902 [00007f4b6a47d186] mmap(NULL, 8192, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_ANONYMOUS, -1, 0) = 0x7f4b6a454000
+11902 [00007f4b6a47d05e] pread64(3, "\6\0\0\0\4\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0@\0\0\0\0\0\0\0"..., 784, 64) = 784
+11902 [00007f4b6a47d05e] pread64(3, "\4\0\0\0\20\0\0\0\5\0\0\0GNU\0\2\0\0\300\4\0\0\0\3\0\0\0\0\0\0\0", 32, 848) = 32
+11902 [00007f4b6a47d05e] pread64(3, "\4\0\0\0\24\0\0\0\3\0\0\0GNU\0\30x\346\264ur\f|Q\226\236i\253-'o"..., 68, 880) = 68
+11902 [00007f4b6a47d186] mmap(NULL, 2037344, PROT_READ, MAP_PRIVATE|MAP_DENYWRITE, 3, 0) = 0x7f4b6a262000
+11902 [00007f4b6a47d186] mmap(0x7f4b6a284000, 1540096, PROT_READ|PROT_EXEC, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x22000) = 0x7f4b6a284000
+11902 [00007f4b6a47d186] mmap(0x7f4b6a3fc000, 319488, PROT_READ, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x19a000) = 0x7f4b6a3fc000
+11902 [00007f4b6a47d186] mmap(0x7f4b6a44a000, 24576, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_DENYWRITE, 3, 0x1e7000) = 0x7f4b6a44a000
+11902 [00007f4b6a47d186] mmap(0x7f4b6a450000, 13920, PROT_READ|PROT_WRITE, MAP_PRIVATE|MAP_FIXED|MAP_ANONYMOUS, -1, 0) = 0x7f4b6a450000
+11902 [00007f4b6a47ce2b] close(3)       = 0
+11902 [00007f4b6a45fcc0] arch_prctl(ARCH_SET_FS, 0x7f4b6a455540) = 0
+11902 [00007f4b6a47d23b] mprotect(0x7f4b6a44a000, 16384, PROT_READ) = 0
+11902 [00007f4b6a47d23b] mprotect(0x600000, 4096, PROT_READ) = 0
+11902 [00007f4b6a47d23b] mprotect(0x7f4b6a48b000, 4096, PROT_READ) = 0
+11902 [00007f4b6a47d20b] munmap(0x7f4b6a456000, 29079) = 0
+11902 [00007f4b6a370077] write(2, "Usage: ./crackme3 password\n", 27) = 27
+11902 [00007f4b6a345146] exit_group(1)  = ?
+11902 [????????????????] +++ exited with 1 +++
