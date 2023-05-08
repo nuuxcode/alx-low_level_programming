@@ -20,14 +20,14 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		return (0);
 	buffer = (char *)malloc(letters * sizeof(char));
 	num_bytes = read(fd, buffer, letters);
-	for (i = 0; i < num_bytes; i++)
-	{
-		putchar(buffer[i]);
-	}
 	if (num_bytes == -1)
 	{
 		free(buffer);
 		return (0);
+	}
+	for (i = 0; i < num_bytes; i++)
+	{
+		putchar(buffer[i]);
 	}
 	close(fd);
 	free(buffer);
