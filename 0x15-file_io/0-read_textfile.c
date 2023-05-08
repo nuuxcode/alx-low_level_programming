@@ -11,6 +11,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	int fd;
 	char *buffer;
 	ssize_t num_bytes;
+	ssize_t num_writes;
 
 	if (!filename)
 		return (0);
@@ -26,7 +27,8 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		free(buffer);
 		return (0);
 	}
-	if (write(STDOUT_FILENO, buffer, letters) == -1)
+	num_writes = write(STDOUT_FILENO, buffer, letters);
+	if (num_writes == -1)
 	{
 		free(buffer);
 		return (0);
