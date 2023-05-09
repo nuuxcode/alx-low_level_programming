@@ -81,11 +81,10 @@ int main(int ac, char **av)
 {
 	char *read;
 	int new;
-	char *filename = av[0];
 
 	if (ac != 3)
 	{
-		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", filename + 2);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
 	read = read_file(av[1], 1024);
