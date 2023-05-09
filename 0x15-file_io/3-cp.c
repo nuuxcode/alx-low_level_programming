@@ -62,6 +62,7 @@ int new_file(const char *file_to, char *buffer)
 	while (buffer && buffer[len])
 		len++;
 	write(fd, buffer, len);
+	free(buffer);
 	close_ret = close(fd);
 	if (close_ret == -1)
 	{
