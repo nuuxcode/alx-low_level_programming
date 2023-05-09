@@ -44,16 +44,25 @@ int new_file(const char *file_to, char *buffer)
 {
 	int fd;
 	int len = 0;
+	int close_ret = 0;
 
 	if (!file_to)
 		return (-1);
 	fd = open(file_to, O_RDWR | O_CREAT | O_TRUNC, 0664);
 	if (fd == -1)
-		return (-1);
+	{
+		dprintf(2, "Error: Can't write to %s\n", file_to);
+		exit(99);
+	}
 	while (buffer && buffer[len])
 		len++;
 	write(fd, buffer, len);
-	close(fd);
+	close_ret = close(fd);
+	if (close_ret == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
 	return (1);
 }
 /**

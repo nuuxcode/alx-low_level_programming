@@ -29,18 +29,18 @@ open file file_from with read and write
     You must read 1,024 bytes at a time from the file_from to make less system calls. Use a buffer
 
 open file file_to with read and write
-    if file_to already exists, truncate it
+    Xif file_to already exists, truncate it
 
-    if you can not create or if write to file_to fails,
-        exit with code 99 and print Error: Can't write to av[2]
+    Xif you can not create or if write to file_to fails,
+    X    exit with code 99 and print Error: Can't write to av[2]
 
-    if you can not close a file descriptor
-        exit with code 100 and print Error: Can't close fd FD_VALUE
-        FD_VALUE is the value of the file descriptor
+    Xif you can not close a file descriptor
+        Xexit with code 100 and print Error: Can't close fd FD_VALUE
+        XFD_VALUE is the value of the file descriptor
 
-    Permissions 664 of the created file: rw-rw-r--. If the file already exists, do not change the permissions
+    XPermissions 664 of the created file: rw-rw-r--. If the file already exists, do not change the permissions
 
-    You are allowed to use dprintf
+    XYou are allowed to use dprintf
 
     gcc -Wall -pedantic -Werror -Wextra -std=gnu89 3-cp.c -o cp
 
