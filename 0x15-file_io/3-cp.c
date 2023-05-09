@@ -19,7 +19,7 @@ char *read_file(const char *file_from, size_t letters)
 	fd = open(file_from, O_RDWR);
 	if (fd == -1)
 	{
-		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
 		exit(98);
 	}
 	buffer = malloc(letters * sizeof(char));
@@ -34,7 +34,7 @@ char *read_file(const char *file_from, size_t letters)
 	close_ret = close(fd);
 	if (close_ret == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 	return (buffer);
@@ -56,7 +56,7 @@ int new_file(const char *file_to, char *buffer)
 	fd = open(file_to, O_RDWR | O_CREAT | O_TRUNC, 0664);
 	if (fd == -1)
 	{
-		dprintf(2, "Error: Can't write to %s\n", file_to);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
 		exit(99);
 	}
 	while (buffer && buffer[len])
@@ -66,7 +66,7 @@ int new_file(const char *file_to, char *buffer)
 	close_ret = close(fd);
 	if (close_ret == -1)
 	{
-		dprintf(2, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
 	}
 	return (1);
