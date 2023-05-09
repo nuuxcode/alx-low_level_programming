@@ -1,0 +1,79 @@
+
+#include "main.h"
+
+/**
+ * read_file - function that convert
+ * @file_from: a
+ * @letters: a
+ * Return: Always 0.
+ */
+char *read_file(const char *file_from, size_t letters)
+{
+	int fd;
+	char *buffer;
+	ssize_t num_bytes;
+
+	if (!file_from)
+		return (0);
+	fd = open(file_from, O_RDWR);
+	if (fd == -1)
+	{
+		dprintf(2, "Error: Can't read from file %s\n", file_from);
+		exit(98);
+	}
+	buffer = malloc(letters * sizeof(char));
+	if (!buffer)
+		return (0);
+	num_bytes = read(fd, buffer, letters);
+	if (num_bytes == -1)
+	{
+		free(buffer);
+		return (0);
+	}
+	if (close(fd) == -1)
+		return (0);
+	return (buffer);
+}
+/**
+ * new_file - function that convert
+ * @file_to: a
+ * @buffer: a
+ * Return: Always 0.
+ */
+int new_file(const char *file_to, char *buffer)
+{
+	int fd;
+	int len = 0;
+
+	if (!file_to)
+		return (-1);
+	fd = open(file_to, O_RDWR | O_CREAT | O_TRUNC, 0664);
+	if (fd == -1)
+		return (-1);
+	while (buffer && buffer[len])
+		len++;
+	write(fd, buffer, len);
+	close(fd);
+	return (1);
+}
+/**
+ * main - function that convert
+ * @ac: a
+ * @av: a
+ * Return: Always 0.
+ */
+int main(int ac, char **av)
+{
+	char *read;
+	int new;
+	char *filename = av[0];
+
+	if (ac != 3)
+	{
+		dprintf(STDERR_FILENO, "Usage: %s file_from file_to\n", filename + 2);
+		exit(97);
+	}
+	read = read_file(av[1], 1024);
+	new = new_file(av[2], read);
+	return (new);
+}
