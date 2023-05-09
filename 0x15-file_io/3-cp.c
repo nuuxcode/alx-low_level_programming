@@ -12,6 +12,7 @@ char *read_file(const char *file_from, size_t letters)
 	int fd;
 	char *buffer;
 	ssize_t num_bytes;
+	int close_ret = 0;
 
 	if (!file_from)
 		return (0);
@@ -30,8 +31,12 @@ char *read_file(const char *file_from, size_t letters)
 		free(buffer);
 		return (0);
 	}
-	if (close(fd) == -1)
-		return (0);
+	close_ret = close(fd);
+	if (close_ret == -1)
+	{
+		dprintf(2, "Error: Can't close fd %d\n", fd);
+		exit(100);
+	}
 	return (buffer);
 }
 /**
