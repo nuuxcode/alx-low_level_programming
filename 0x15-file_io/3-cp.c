@@ -1,78 +1,68 @@
-
 #include "main.h"
 
 /**
- * main - function that convert
- * @ac: a
- * @av: a
+ * wr_error - function that convert
+ * @code: a
+ * @name: a
  * Return: Always 0.
  */
-int main(int ac, char **av)
+void wr_error(int code, char *name)
 {
+	switch (code)
+	{
+	case 98:
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", name);
+		exit(98);
+		break;
+	case 99:
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", name);
+		exit(99);
+		break;
+	}
+}
 
-	int fd;
-	char *buffer;
-	ssize_t num_bytes;
-	int close_ret = 0;
-	int len = 0;
-	size_t letters = 1024;
+/**
+ * main - function that convert
+ * @argc: a
+ * @argv: a
+ * Return: Always 0.
+ */
+int main(int argc, char *argv[])
+{
+	int ffrom, fto, wrt = 0, rd = 0;
+	char buffer[1024];
 
-	if (ac != 3)
+	if (argc != 3)
 	{
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
 		exit(97);
 	}
+	ffrom = open(argv[1], O_RDONLY);
+	if (ffrom == -1)
+		wr_error(98, argv[1]);
 
-	if (!av[1])
-		return (0);
-	fd = open(av[1], O_RDONLY);
-	if (fd == -1)
+	fto = open(argv[2], O_CREAT | O_TRUNC | O_WRONLY, 0664);
+	if (fto == -1)
+		wr_error(99, argv[2]);
+
+	while ((rd = read(ffrom, buffer, 1024)))
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
-	}
-	buffer = malloc(letters * sizeof(char));
-	if (!buffer)
-		return (0);
-	num_bytes = read(fd, buffer, letters);
-	if (num_bytes == -1)
-	{
-		free(buffer);
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", av[1]);
-		exit(98);
-	}
-	close_ret = close(fd);
-	if (close_ret == -1)
-	{
-		free(buffer);
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
-		exit(100);
+		if (rd == -1)
+			wr_error(98, argv[1]);
+		wrt = write(fto, buffer, rd);
+		if (wrt == -1)
+			wr_error(99, argv[2]);
 	}
 
-	if (!av[2])
-		return (-1);
-	fd = open(av[2], O_RDWR | O_CREAT | O_TRUNC, 0664);
-	if (fd == -1)
+	if (close(ffrom) == -1)
 	{
-		free(buffer);
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		exit(99);
-	}
-	while (buffer && buffer[len])
-		len++;
-	write(fd, buffer, len);
-	if (fd == -1)
-	{
-		free(buffer);
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", av[2]);
-		exit(99);
-	}
-	free(buffer);
-	close_ret = close(fd);
-	if (close_ret == -1)
-	{
-		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", ffrom);
 		exit(100);
 	}
-	return (1);
+	if (close(fto) == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fto);
+		exit(100);
+	}
+	return (0);
 }
