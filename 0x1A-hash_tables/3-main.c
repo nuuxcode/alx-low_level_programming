@@ -27,13 +27,13 @@ int main(void)
 
 	printf("----\n");
 
-	index = key_index((unsigned char *)"mentioner", ht->size);
+	index = key_index((unsigned char *)"", ht->size);
 
 	printf("%p\n", (void *)ht->array[index]);
 	if (ht->array[index])
 		printf("index:%d - return:%d - key:%s - value:%s - next:%p\n", index, ret, ht->array[index]->key, ht->array[index]->value, (void *)ht->array[index]->next);
 
-	ret = hash_table_set(ht, "mentioner", "a");
+	ret = hash_table_set(ht, "", "a");
 
 	printf("%p\n", (void *)ht->array[index]);
 	if (ht->array[index])
