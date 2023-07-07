@@ -9,8 +9,11 @@
  */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 {
-	hash_node_t *new_node, *head = NULL;
+	hash_node_t *new_node;
 	unsigned long int index = 0;
+
+	if (!ht || !key || !value || key[0] == '\0')
+		return (0);
 
 	index = key_index((const unsigned char *)key, ht->size);
 
@@ -30,11 +33,11 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 	}
 	strcpy(new_node->key, key);
 	strcpy(new_node->value, value);
-
-	new_node->next = head;
-	head = new_node;
-
-	ht->array[index] = head;
+	if (ht->array[index])
+		new_node->next = ht->array[index];
+	else
+		new_node->next = NULL;
+	ht->array[index] = new_node;
 
 	return (1);
 }
