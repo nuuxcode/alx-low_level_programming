@@ -16,45 +16,20 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 		return (0);
 	index = key_index((const unsigned char *)key, ht->size);
 
-	new_node = malloc(sizeof(hash_node_t));
-	if (!new_node)
+	current = ht->array[index];
+	while (current)
 	{
-		return (0);
-	}
-	new_node->key = malloc(strlen(key) + 1);
-	if (!new_node->key)
-	{
-		free(new_node);
-		return (0);
-	}
-	new_node->value = malloc(strlen(value) + 1);
-	if (!new_node->value)
-	{
-		free(new_node->key);
-		free(new_node);
-		return (0);
-	}
-	strcpy(new_node->key, key);
-	strcpy(new_node->value, value);
-	if (ht->array[index])
-	{
-		current = ht->array[index];
-		while (current)
+		if (strncmp(key, current->key, strlen(current->key) + 1) == 0)
 		{
-			if (strncmp(key, current->key, strlen(current->key) + 1) == 0)
-			{
-				strcpy(current->value, value);
-				free(new_node->value);
-				free(new_node->key);
-				free(new_node);
-				return (1);
-			}
-			current = current->next;
+			strcpy(current->value, value);
+			return (1);
 		}
-		new_node->next = ht->array[index];
+		current = current->next;
 	}
-	else
-		new_node->next = NULL;
+	new_node = malloc(sizeof(hash_node_t));
+	new_node->key = strdup(key);
+	new_node->value = strdup(value);
+	new_node->next = ht->array[index];
 	ht->array[index] = new_node;
 
 	return (1);
